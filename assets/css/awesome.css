@@ -127,7 +127,12 @@
 .fa-rotate-90 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
   -webkit-transform: rotate(90deg);
-          transform: rotate(90deg); }
+  -moz-transform: rotate(90deg); /* Mozilla Firefox */
+  -ms-transform: rotate(90deg); /* Microsoft IE/Edge */
+  -o-transform: rotate(90deg); /* Opera */
+  transform: rotate(90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1); /* Standard property for compatibility */
+}
 
 .fa-rotate-180 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
